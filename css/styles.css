@@ -7,6 +7,7 @@
     --second-background-color: #2F303A;
     --third-background-color: #F5F4FA;
     --background-button: #F5F4FA;
+    --basic-socicon-color: #AFB1B8;
 } 
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -346,11 +347,22 @@ img {
 .team-soc-link {
     width: 100%;
     height: 100%;
-    display: block;
+    display: flex;
     border-radius: 50%;
-    background-color: red;
+    align-items: center;
+    justify-content: center;
+    color: var(--basic-socicon-color);
 }
 
+.team-soc-icon {
+    fill: currentColor;
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+}
 
 
 /*-------------------------------------------------------CLIENT-------------------------------------------------------*/
@@ -383,15 +395,25 @@ img {
 }
 
 .client-link {
-    display: block;
-    width: 50px;
-    height: 50px;
-    outline: 1px solid red;
-    margin: auto;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: var(--basic-socicon-color);
 }
 
 .client-item:first-child {
     margin-left: 0px;
+}
+
+.client-logo {
+    fill: currentColor;
+}
+
+.client-link:hover,
+.client-link:focus {
+    color: var(--accent-color);
 }
 
 /*-------------------------------------------------------FOOTER-------------------------------------------------------*/
