@@ -68,8 +68,6 @@ img {
 .header {
     background-color: var(--first-background-color);
     border-bottom: 1px solid #ECECEC;
-
-   /*outline: 1px solid tomato*/
 }
 
 .header .container {
@@ -126,18 +124,35 @@ img {
     margin-left: auto;
 }
 
+.header-contact {
+    display: flex;
+    align-items: center;
+}
+
+.header-icon-envelope {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: var(--text-color);
+    order: -1;
+}
+
+.header-icon-smartphone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: var(--text-color);
+    order: -1;
+}
+
 .header-mail,.header-tel {
     padding-top: 32px;
     padding-bottom: 32px;
-    display: block;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--text-color);
-
-    /* outline: 1px solid tomato; */
-
 }
 
 .header-link:hover, 
@@ -148,6 +163,12 @@ img {
 .header-tel:focus
 { color: var(--accent-color); } 
 
+.header-mail:hover + .header-icon-envelope,
+.header-mail:focus + .header-icon-envelope,
+.header-tel:hover + .header-icon-smartphone,
+.header-tel:focus + .header-icon-smartphone {
+    fill: var(--accent-color);
+}
 
 /*-------------------------------------------------------HERO-------------------------------------------------------*/
 
